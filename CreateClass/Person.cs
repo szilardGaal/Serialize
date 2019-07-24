@@ -10,14 +10,29 @@ using System.IO;
 namespace CreateClass
 {
     [Serializable]
-    public class Person
+    public class Person : IDeserializationCallback, ISerializable
     {
+        [NonSerialized]
+        private int _Age;
+
         public String Name { get; protected set; }
         public DateTime BirthDate { get; }
         public Gender Gender { get; }
-        public int Age { get { return (DateTime.Now - BirthDate).Days / 365; } }
+        public int Age { get { return _Age; } protected set { _Age = value; } }
 
         public Person() { }
+
+        public Person(SerializationInfo info, StreamingContext context)
+        {
+            if (info == null)
+            {
+                throw new ArgumentNullException();
+            }
+            this.Name = (string)info.GetValue("name", typeof(string));
+            this.BirthDate = (DateTime)info.GetValue("birthdate", typeof(DateTime));
+            this.Gender = (Gender)info.GetValue("gender", typeof(Gender));
+            this.Age = (DateTime.Now - BirthDate).Days / 365;
+        }
 
         public Person(String name, DateTime birthDate, String gender)
         {
@@ -26,6 +41,7 @@ namespace CreateClass
             Gender genderEnum;
             Enum.TryParse<Gender>(gender, out genderEnum);
             this.Gender = genderEnum;
+            this.Age = (DateTime.Now - BirthDate).Days / 365;
         }
 
         public void Serialize(String output)
@@ -72,11 +88,26 @@ namespace CreateClass
             return newPerson;
         }
 
-
         public override string ToString()
         {
             string genderString = Gender.ToString();
             return "\nNAME:" + Name + "\nAGE: " + Age + "\nBIRTH:" + BirthDate + "\nGENDER: "+ genderString;
+        }
+
+        public void OnDeserialization(Object person)
+        {
+            this.Age = (DateTime.Now - BirthDate).Days / 365;
+        }
+
+        public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            if (info == null)
+            {
+                throw new System.ArgumentNullException("null");
+            }
+            info.AddValue("name", this.Name);
+            info.AddValue("gender", this.Gender);
+            info.AddValue("birthdate", this.BirthDate);
         }
     }
 

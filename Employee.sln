@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializePeople", "CreateClass\SerializePeople.csproj", "{95672888-AEEB-4C5B-BAD6-7F85CF646A50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{F7DE6FA3-FC32-4797-B82E-BD811845AF71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95672888-AEEB-4C5B-BAD6-7F85CF646A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95672888-AEEB-4C5B-BAD6-7F85CF646A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95672888-AEEB-4C5B-BAD6-7F85CF646A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95672888-AEEB-4C5B-BAD6-7F85CF646A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7DE6FA3-FC32-4797-B82E-BD811845AF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7DE6FA3-FC32-4797-B82E-BD811845AF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7DE6FA3-FC32-4797-B82E-BD811845AF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7DE6FA3-FC32-4797-B82E-BD811845AF71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F52FFA26-AEF1-4239-B1C9-78FA8F9937AD}
+	EndGlobalSection
+EndGlobal

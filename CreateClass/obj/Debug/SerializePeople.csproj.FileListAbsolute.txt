@@ -1,0 +1,7 @@
+C:\Users\gaals\Desktop\C#\.NET modul\3rd SI week\Serialize\CreateClass\bin\Debug\CreateClass.exe.config
+C:\Users\gaals\Desktop\C#\.NET modul\3rd SI week\Serialize\CreateClass\bin\Debug\CreateClass.exe
+C:\Users\gaals\Desktop\C#\.NET modul\3rd SI week\Serialize\CreateClass\bin\Debug\CreateClass.pdb
+C:\Users\gaals\Desktop\C#\.NET modul\3rd SI week\Serialize\CreateClass\obj\Debug\SerializePeople.csproj.CoreCompileInputs.cache
+C:\Users\gaals\Desktop\C#\.NET modul\3rd SI week\Serialize\CreateClass\obj\Debug\CreateClass.exe
+C:\Users\gaals\Desktop\C#\.NET modul\3rd SI week\Serialize\CreateClass\obj\Debug\CreateClass.pdb
+C:\Users\gaals\Desktop\C#\.NET modul\3rd SI week\Serialize\CreateClass\obj\Debug\SerializePeople.csprojAssemblyReference.cache

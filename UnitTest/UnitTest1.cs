@@ -52,6 +52,7 @@ namespace UnitTest
 
             Assert.IsTrue(TestPerson1.Name == ReloadedPerson.Name);
             Assert.IsTrue(TestPerson1.Gender == ReloadedPerson.Gender);
+            Assert.IsTrue(TestPerson1.Age == ReloadedPerson.Age);
             Assert.IsTrue(TestPerson1.Profession == ((Employee)ReloadedPerson).Profession);
 
             File.Delete(@"C:\testSer.bin");
